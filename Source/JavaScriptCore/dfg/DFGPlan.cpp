@@ -548,8 +548,8 @@ bool Plan::isStillValidCodeBlock()
 
 bool Plan::reallyAdd(CommonData* commonData)
 {
-    if (!m_watchpoints.areStillValidOnMainThread(*m_vm, m_identifiers))
-        return false;
+    // if (!m_watchpoints.areStillValidOnMainThread(*m_vm, m_identifiers))
+    //     return false;
 
     ASSERT(m_vm->heap.isDeferred());
     m_identifiers.reallyAdd(*m_vm, commonData);
