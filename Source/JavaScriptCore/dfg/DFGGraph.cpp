@@ -1368,8 +1368,8 @@ JSValue Graph::tryGetConstantProperty(
     // However, if structures transitions are not watched, then object can get to the one of the structures transitively while it is changing the value.
     // But we can still optimize it if StructureSet is only one: in that case, there is no way to fulfill Structure requirement while changing the property
     // and avoiding the replacement watchpoint firing.
-    if (structureSet.size() != 1)
-        return JSValue();
+    // if (structureSet.size() != 1)
+    //     return JSValue();
 
     return result;
 }
